@@ -81,8 +81,24 @@ body {
 }
 
 a {
+	text-decoration: none;
 	transition: .3s;
 	&:hover {
 		transition: .3s;
+		text-decoration: none;
 	}
+	&:active {
+		text-decoration: none;	
+	}
+	&:focus {
+		text-decoration: none;	
+	}
+}
+
+.visible {
+	visibility: visible !important;
+}
+
+.w200 {
+	width: 200px !important;
 }

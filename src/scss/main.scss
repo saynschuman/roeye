@@ -17,6 +17,9 @@ header.header {
 			position: relative;
 			color: #fff;
 			text-decoration: none;
+			&:hover {
+				color: #eee;
+			}			
 			&::after {
 				height: 1px;
 				width: 100%;
@@ -31,13 +34,204 @@ header.header {
 			height: 15px;
 			width: 15px;
 			position: absolute;
-			right: 0;
+			right: 15px;
 			background-image: url(../img/close.png);
-			top: 50%;
-			transform: translateY(-50%);
+			top: 4px;
 			cursor: pointer;
+			transition: .3s;
 			&:hover {
-				opacity: .8;
+				transform: rotate(-180deg);
+				transition: .3s;
+			}
+		}
+	}
+	.top-header {
+		background-color: #333;
+		color: #fff;
+		padding: 7px 0;
+		font-size: 20px;
+		font-weight: 300;
+		a {
+			font-weight: 600;
+			color: #fff;
+			&:hover {
+				color: #d6d6d6;
+			}
+		} 
+		ul {
+			text-align: right;
+			li {
+				display: inline-block;
+				padding: 0 8px;
+				&:last-child {
+					padding-right: 0;
+				}
+				a {
+					text-align: right;
+					color: #fff;
+					&:hover {
+						color: #d6d6d6;
+					}
+				}
+			}
+		}
+	}
+	.middle-header {
+		padding: 22px 0;
+		nav {
+			ul {
+				position: relative;
+				margin-top: 10px;
+				li {
+					display: inline-block;
+					margin-left: 35px;
+					position: relative;
+					&.toggled {
+						a {
+							color: $font;
+							z-index: 1;
+							&::before {
+								content: '';
+								position: absolute;
+								height: 1px;
+								width: 0;
+								border-bottom: 1px dotted $font;
+								bottom: 0;
+								left: 0;
+							}
+							&::after {
+								content: '\f107';
+								font-family: FontAwesome;
+								position: absolute;
+								right: -18px;
+								bottom: 0;
+								top: 0;
+								height: 100%;
+							}							
+						}
+						&:hover {
+							.submenu {
+								visibility: visible;
+								opacity: 1;
+								transition: .4s;
+							}
+						}
+					}					
+					a {
+						font-weight: 300;
+						color: $font;
+						position: relative;
+						font-size: 18px;
+						transition: .3s;
+						&::before {
+							content: '';
+							position: absolute;
+							height: 1px;
+							width: 0;
+							border-bottom: 1px dotted $font;
+							bottom: 0;
+							left: 0;
+							transition: .3s;
+						}
+						&:hover {
+							&::before {
+								width: 100%;
+							}	
+						}
+						&.active {
+							color: $blue;
+								&::before {
+									content: '';
+									position: absolute;
+									height: 1px;
+									width: 100%;
+									border-bottom: 1px dotted $blue;
+									bottom: 0;
+									left: 0;
+								}							
+						}
+						&.search-ic {
+							color: #d6d6d6;
+							transition: .3s;
+							&:hover {
+								color: #888;
+								transition: .3s;
+							}							
+							&::before {
+								display: none;
+							}
+						}
+					}
+					.submenu {
+						position: absolute;
+						left: 0;
+						width: 250px;
+						visibility: hidden;
+						opacity: 0;
+						top: 0;
+						padding-top: 22px;
+						z-index: 0;
+						&:hover {
+							visibility: visible;
+						}
+						li {
+							display: block;
+							margin-left: 0px;
+							padding: 2px 0;
+							a {
+								&::before {
+									display: none;
+								}	
+								&::after {
+									display: none;
+								}
+							}
+							&::after {
+								content: '\f178';
+								font-family: FontAwesome;
+								position: absolute;
+								left: -22px;
+								top: 5px;
+								color: transparent;
+								transition: .3s;
+							}
+							&:hover {
+								&::after {
+									color: $font;
+									transition: .3s;
+								}
+							}
+						}
+					}
+					form {
+						position: absolute;
+						width: 0;
+						top: 35px;
+						right: 0;
+						background-color: #fff;
+						z-index: 9;
+						visibility: hidden;
+						transition: .3s;
+						input {
+							width: 100%;
+							border: none;
+							border-bottom: 1px dotted $font;
+							padding-left: 0px;
+						}
+						i {
+							position: absolute;
+							right: 2px;
+							top: 2px;
+							color: #d6d6d6;
+							cursor: pointer;
+							transition: .3s;
+							&:hover {
+								color: #888;
+								transition: .3s;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

@@ -1,7 +1,31 @@
 (function ($) {
 
+	// clicked
+
 	$('.close-btn').click(function(){
-		$('.clicked').fadeOut(300);
+		$('.clicked a').css('opacity', 0);
+		$('.clicked').slideUp(300);
 	})
+
+	// menu 
+
+	$('.search-ic').click(function(e){
+		e.preventDefault();
+		$('#header-search').toggleClass('w200 visible');
+		setTimeout(function(){
+			$('#s').focus();
+		}, 200);
+		
+	})
+	$('#header-search input').blur(function(){
+		$(this).toggleClass('w0');
+		$('#header-search').toggleClass('w200 visible');
+	})
+
+	$('close-search').click(function(){
+		$('#header-search input').toggleClass('w0');
+		$('#header-search').toggleClass('w200 visible');
+	})
+
 
 }(jQuery));

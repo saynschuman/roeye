@@ -70,11 +70,23 @@ body {
   display: block; }
 
 a {
+  text-decoration: none;
   -webkit-transition: .3s;
   transition: .3s; }
   a:hover {
     -webkit-transition: .3s;
-    transition: .3s; }
+    transition: .3s;
+    text-decoration: none; }
+  a:active {
+    text-decoration: none; }
+  a:focus {
+    text-decoration: none; }
+
+.visible {
+  visibility: visible !important; }
+
+.w200 {
+  width: 200px !important; }
 
 header.header .container {
   position: relative; }
@@ -90,6 +102,8 @@ header.header .clicked {
     position: relative;
     color: #fff;
     text-decoration: none; }
+    header.header .clicked a:hover {
+      color: #eee; }
     header.header .clicked a::after {
       height: 1px;
       width: 100%;
@@ -102,12 +116,171 @@ header.header .clicked {
     height: 15px;
     width: 15px;
     position: absolute;
-    right: 0;
+    right: 15px;
     background-image: url(../img/close.png);
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    cursor: pointer; }
+    top: 4px;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: .3s; }
     header.header .clicked .close-btn:hover {
-      opacity: .8; }
+      -webkit-transform: rotate(-180deg);
+          -ms-transform: rotate(-180deg);
+              transform: rotate(-180deg);
+      -webkit-transition: .3s;
+      transition: .3s; }
+
+header.header .top-header {
+  background-color: #333;
+  color: #fff;
+  padding: 7px 0;
+  font-size: 20px;
+  font-weight: 300; }
+  header.header .top-header a {
+    font-weight: 600;
+    color: #fff; }
+    header.header .top-header a:hover {
+      color: #d6d6d6; }
+  header.header .top-header ul {
+    text-align: right; }
+    header.header .top-header ul li {
+      display: inline-block;
+      padding: 0 8px; }
+      header.header .top-header ul li:last-child {
+        padding-right: 0; }
+      header.header .top-header ul li a {
+        text-align: right;
+        color: #fff; }
+        header.header .top-header ul li a:hover {
+          color: #d6d6d6; }
+
+header.header .middle-header {
+  padding: 22px 0; }
+  header.header .middle-header nav ul {
+    position: relative;
+    margin-top: 10px; }
+    header.header .middle-header nav ul li {
+      display: inline-block;
+      margin-left: 35px;
+      position: relative; }
+      header.header .middle-header nav ul li.toggled a {
+        color: #111;
+        z-index: 1; }
+        header.header .middle-header nav ul li.toggled a::before {
+          content: '';
+          position: absolute;
+          height: 1px;
+          width: 0;
+          border-bottom: 1px dotted #111;
+          bottom: 0;
+          left: 0; }
+        header.header .middle-header nav ul li.toggled a::after {
+          content: '\f107';
+          font-family: FontAwesome;
+          position: absolute;
+          right: -18px;
+          bottom: 0;
+          top: 0;
+          height: 100%; }
+      header.header .middle-header nav ul li.toggled:hover .submenu {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: .4s;
+        transition: .4s; }
+      header.header .middle-header nav ul li a {
+        font-weight: 300;
+        color: #111;
+        position: relative;
+        font-size: 18px;
+        -webkit-transition: .3s;
+        transition: .3s; }
+        header.header .middle-header nav ul li a::before {
+          content: '';
+          position: absolute;
+          height: 1px;
+          width: 0;
+          border-bottom: 1px dotted #111;
+          bottom: 0;
+          left: 0;
+          -webkit-transition: .3s;
+          transition: .3s; }
+        header.header .middle-header nav ul li a:hover::before {
+          width: 100%; }
+        header.header .middle-header nav ul li a.active {
+          color: #00b2c7; }
+          header.header .middle-header nav ul li a.active::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            border-bottom: 1px dotted #00b2c7;
+            bottom: 0;
+            left: 0; }
+        header.header .middle-header nav ul li a.search-ic {
+          color: #d6d6d6;
+          -webkit-transition: .3s;
+          transition: .3s; }
+          header.header .middle-header nav ul li a.search-ic:hover {
+            color: #888;
+            -webkit-transition: .3s;
+            transition: .3s; }
+          header.header .middle-header nav ul li a.search-ic::before {
+            display: none; }
+      header.header .middle-header nav ul li .submenu {
+        position: absolute;
+        left: 0;
+        width: 250px;
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        padding-top: 22px;
+        z-index: 0; }
+        header.header .middle-header nav ul li .submenu:hover {
+          visibility: visible; }
+        header.header .middle-header nav ul li .submenu li {
+          display: block;
+          margin-left: 0px;
+          padding: 2px 0; }
+          header.header .middle-header nav ul li .submenu li a::before {
+            display: none; }
+          header.header .middle-header nav ul li .submenu li a::after {
+            display: none; }
+          header.header .middle-header nav ul li .submenu li::after {
+            content: '\f178';
+            font-family: FontAwesome;
+            position: absolute;
+            left: -22px;
+            top: 5px;
+            color: transparent;
+            -webkit-transition: .3s;
+            transition: .3s; }
+          header.header .middle-header nav ul li .submenu li:hover::after {
+            color: #111;
+            -webkit-transition: .3s;
+            transition: .3s; }
+      header.header .middle-header nav ul li form {
+        position: absolute;
+        width: 0;
+        top: 35px;
+        right: 0;
+        background-color: #fff;
+        z-index: 9;
+        visibility: hidden;
+        -webkit-transition: .3s;
+        transition: .3s; }
+        header.header .middle-header nav ul li form input {
+          width: 100%;
+          border: none;
+          border-bottom: 1px dotted #111;
+          padding-left: 0px; }
+        header.header .middle-header nav ul li form i {
+          position: absolute;
+          right: 2px;
+          top: 2px;
+          color: #d6d6d6;
+          cursor: pointer;
+          -webkit-transition: .3s;
+          transition: .3s; }
+          header.header .middle-header nav ul li form i:hover {
+            color: #888;
+            -webkit-transition: .3s;
+            transition: .3s; }
