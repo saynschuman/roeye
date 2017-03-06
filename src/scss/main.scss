@@ -1,2 +1,44 @@
-@import "includes/variables";
-@import "includes/fonts";
+@import "includes/_variables";
+@import "includes/_fonts";
+@import "includes/_reset";
+
+header.header {
+	.container {
+		position: relative;
+	}
+	.clicked {
+		background-color: $blue;
+		color: #fff;
+		font-family: 16px;
+		text-align: center; 	
+		position: relative;
+		padding: 10px 0;
+		a {
+			position: relative;
+			color: #fff;
+			text-decoration: none;
+			&::after {
+				height: 1px;
+				width: 100%;
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				background-color: #fff; 
+			}
+		}
+		.close-btn {
+			height: 15px;
+			width: 15px;
+			position: absolute;
+			right: 0;
+			background-image: url(../img/close.png);
+			top: 50%;
+			transform: translateY(-50%);
+			cursor: pointer;
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
+}
