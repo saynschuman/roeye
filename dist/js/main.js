@@ -27,5 +27,9 @@
 		$('#header-search').toggleClass('w200 visible');
 	})
 
+	// wow
+	
+	new WOW().init();
+
 
 }(jQuery));

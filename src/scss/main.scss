@@ -165,12 +165,17 @@ header.header {
 					.submenu {
 						position: absolute;
 						left: 0;
-						width: 250px;
+						width: 200px;
 						visibility: hidden;
+						overflow: hidden;
 						opacity: 0;
+						padding: 25px;
 						top: 0;
-						padding-top: 22px;
+						padding-top: 25px;
+						padding-bottom: 10px;
 						z-index: 0;
+						background-color: rgba(255,255,255,.9);
+						border-radius: 4px;
 						&:hover {
 							visibility: visible;
 						}
@@ -346,5 +351,247 @@ main {
 				}
 			}
 		} 
+	}
+	.content {
+		padding: 90px 0;
+		h1 {
+			font-size: 40px;
+			font-family: 'Ubuntu Condensed', sans-serif;
+			text-align: center;
+			padding-bottom: 30px;
+		}
+		.blue-bord {
+			height: 2px;
+			width: 63px;
+			background-color: $blue;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 52px;
+		}
+		.block {
+			text-align: center;
+			margin-bottom: 40px;
+			.ic {
+				background-image: url(../img/sprite.png);
+				display: block;
+				margin: 0 auto;
+				cursor: pointer;
+			}
+			&:nth-child(1) {
+				.ic {
+					background-position: 0 0;
+					height: 87px;
+					width: 90px;
+					&:hover {
+						background-position: -91px 0;
+					}
+				}
+			}
+			&:nth-child(2) {
+				.ic {
+					background-position: -184px 0;
+					height: 87px;
+					width: 99px;
+					&:hover {
+						background-position: -285px 0;					
+					}
+				}
+			}
+			&:nth-child(3) {
+				.ic {
+					background-position: -389px 0;
+					height: 87px;
+					width: 99px;
+					&:hover {
+						background-position: -496px 0;
+					}
+				}
+			}
+			.title {
+				font-size: 24px;
+				font-weight: 700;
+				padding: 25px 0 19px 0; 
+			}
+			p {
+				font-family: 14px;
+				font-family: 'Ubuntu Light', sans-serif;
+				line-height: 1.6;
+			}
+		}
+	}
+}
+
+footer.footer {
+	.footer-top {
+		background-color: $footer;
+		padding: 60px 0;
+		.title {
+			font-size: 18px;
+			text-transform: uppercase;
+			font-family: 'Ubuntu Condensed', sans-serif;
+			font-weight: 600;
+			border-bottom: 1px solid $footer-border;
+			padding-bottom: 10px;
+			margin-bottom: 12px;
+		}
+		.nav-bottom {
+			li {
+				display: block;
+				padding: 5px 0;
+				a {
+					font-size: 16px;
+					color: $blue-2;
+					font-family: 'Ubuntu Light', sans-serif;
+					position: relative;
+					height: 100%;
+					&::before {
+						content: '';
+						transition: .3s;
+						position: absolute;
+						height: 1px;
+						width: 0;
+						border-bottom: 1px dotted $blue-2;
+						bottom: 0;
+						left: 0;
+					}
+					&:hover {
+						&::before {
+							width: 100%;
+							transition: .3s;
+						}
+					}
+				}
+			}
+		}
+		p {
+			font-size: 14px;
+			line-height: 1.5;
+			color: #666666;
+			font-family: 'Ubuntu Light', sans-serif;
+		}
+		.contacts {
+			padding: 20px 0;
+			li {
+				color: #666666;
+				padding: 4px 0;
+				padding-left: 25px;
+				position: relative;
+				&::before {
+					content: "\f041";
+					position: absolute;
+					left: 0;
+					top: 2px;
+					font-family: FontAwesome;
+					color: #b2b2b2;
+					font-size: 18px;
+				}
+				&:nth-child(2) {
+					&::before {
+						content: "\f095";
+					}
+				}
+				&:last-child {
+					&::before {
+						content: "\f003";
+						font-size: 15px;
+						top: 3px;
+					}
+				}
+				a {
+					font-size: 14px;
+					line-height: 1.5;
+					color: #666666;
+					font-family: 'Ubuntu Regular', sans-serif;
+					position: relative;
+					&::before {
+						content: '';
+						transition: .3s;
+						position: absolute;
+						height: 1px;
+						width: 0;
+						border-bottom: 1px dotted $font;
+						bottom: 0;
+						left: 0;
+					}
+					&:hover {
+						&::before {
+							width: 100%;
+							transition: .3s;
+						}
+					}
+				}
+			}
+		}
+		form {
+			margin: 30px 0;
+			input {
+				height: 45px;
+				border: none;
+				color: #aaa;
+				padding: 0 20px;
+				border-radius: 5px 0 0 5px;
+				width: 225px;
+				&[type="submit"] {
+					color: #fff;
+					background-color: $blue;
+					border-radius: 0 5px 5px 0;
+					margin-left: -3px;
+					font-size: 20px;
+					width: 45px;
+					padding-bottom: 2px;
+					padding-left: 12px;
+					text-align: center;
+					transition: .3s;
+					&:hover {
+						background-color: rgba(0,0,0,.9);
+						transition: .3s;
+					}
+				}
+			}
+		}
+		.bottom-social {
+			li {
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				background-color: $blue;
+				position: relative;
+				text-align: center;
+				border-radius: 100%;
+				margin-right: 10px;
+				&::before {
+					content: '';
+					position: absolute;
+					width: 0;
+					height: 0;
+					border-radius: 100%;
+					background-color: rgba(0,0,0,.9);
+					transition: .3s;
+					top: 0;
+					right: 0;
+					left: 0;
+					bottom: 0;
+					margin: auto;
+				}
+				&:hover {
+					transition: .3s;
+					&::before {
+						height: 100%;
+						transition: .3s;
+						width: 100%;
+					}
+				}				
+				&:last-child {
+					margin-right: 0;
+				}
+				a {
+					color: #fff;
+					display: block;
+					width: 100%;
+					position: absolute;
+					padding: 5px;
+				}	
+			}
+		}
 	}
 }
