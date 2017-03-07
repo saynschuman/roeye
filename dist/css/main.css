@@ -588,3 +588,64 @@ footer.footer .footer-top {
       width: 100%;
       position: absolute;
       padding: 5px; }
+
+.mobile-menu {
+  display: none;
+  position: relative;
+  float: right;
+  width: 25px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0;
+  padding: 0;
+  cursor: pointer;
+  margin-top: 10px; }
+
+.mobile-menu span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #00b2c7;
+  -webkit-transition: .3s;
+  transition: .3s; }
+
+.mobile-menu span:before,
+.mobile-menu span:after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #00b2c7;
+  content: '';
+  -webkit-transition: .3s;
+  transition: .3s; }
+
+.mobile-menu span::before {
+  top: -8px; }
+
+.mobile-menu span::after {
+  bottom: -8px; }
+
+.mobile-menu.active span {
+  background: transparent; }
+
+.mobile-menu.active span:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+
+.mobile-menu.active span:after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }

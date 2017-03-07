@@ -28,8 +28,14 @@
 	})
 
 	// wow
-	
+
 	new WOW().init();
+
+	// mobile menu
+
+	$('.mobile-menu').click(function() {
+		$(this).toggleClass('active');
+	});
 
 
 }(jQuery));
