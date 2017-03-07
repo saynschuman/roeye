@@ -284,3 +284,103 @@ header.header .middle-header {
             color: #888;
             -webkit-transition: .3s;
             transition: .3s; }
+
+main .main-screen {
+  height: auto;
+  background-size: 100%;
+  padding-top: 100px;
+  padding-bottom: 118px; }
+  main .main-screen .main-block {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 23px 33px;
+    border: 1px solid #ccd2d7; }
+    main .main-screen .main-block .left {
+      float: left;
+      width: 782px; }
+      main .main-screen .main-block .left .title {
+        font-size: 36px;
+        color: #00b2c7;
+        font-family: 'Ubuntu Condensed', sans-serif;
+        text-transform: uppercase;
+        line-height: 2.3; }
+      main .main-screen .main-block .left p {
+        font-family: 16px;
+        font-family: 'Ubuntu Light', sans-serif;
+        line-height: 1.8;
+        color: #000; }
+    main .main-screen .main-block .right {
+      float: right;
+      width: -webkit-calc(100% - 782px);
+      width: calc(100% - 782px);
+      padding-left: 33px;
+      position: relative;
+      height: auto; }
+      main .main-screen .main-block .right::before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 1px;
+        background-color: #d9d9d9;
+        top: 0;
+        left: 0; }
+      main .main-screen .main-block .right form input {
+        height: 45px;
+        border: none;
+        font-size: 18px;
+        color: #aeaeae;
+        font-family: 'Ubuntu Light', sans-serif;
+        padding: 0 20px;
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+        margin-bottom: 15px;
+        width: 100%; }
+      main .main-screen .main-block .right form button {
+        background-color: #00b2c7;
+        color: #fff;
+        text-transform: uppercase;
+        width: 100%;
+        border: none;
+        height: 45px;
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+        margin-bottom: 15px;
+        position: relative;
+        -webkit-transition: .3s;
+        transition: .3s; }
+        main .main-screen .main-block .right form button::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 0;
+          background-color: rgba(255, 255, 255, 0.1);
+          -webkit-transition: .3s;
+          transition: .3s;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          margin: auto; }
+        main .main-screen .main-block .right form button:hover {
+          -webkit-transition: .3s;
+          transition: .3s; }
+          main .main-screen .main-block .right form button:hover::before {
+            height: 100%;
+            -webkit-transition: .3s;
+            transition: .3s; }
+      main .main-screen .main-block .right form a {
+        font-family: 14px;
+        color: #999;
+        text-align: center;
+        display: block;
+        width: 46px;
+        position: relative;
+        margin: 0 auto; }
+        main .main-screen .main-block .right form a::after {
+          content: '';
+          position: absolute;
+          bottom: 1px;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background-color: #999; }
+        main .main-screen .main-block .right form a:hover {
+          color: #888; }
