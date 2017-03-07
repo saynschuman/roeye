@@ -37,5 +37,44 @@
 		$(this).toggleClass('active');
 	});
 
+// validation
+
+	$("#land-1-form").validate({
+		rules:{
+			name:{
+				required: true,
+				minlength: 2
+			},
+			adress:{
+				required: true,
+				minlength: 5
+			},
+			email:{
+				required: true
+			}
+		}
+	});
+	$("#land-2-form").validate({
+		rules:{
+			name:{
+				required: true,
+				minlength: 2
+			},
+			adress:{
+				required: true,
+				minlength: 5
+			},
+			email:{
+				required: true
+			}
+		}
+	});
+	$("#subscribe").validate({
+		rules:{
+			email:{
+				required: true
+			}
+		}
+	});
 
 }(jQuery));

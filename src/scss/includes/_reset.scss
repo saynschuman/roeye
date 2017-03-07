@@ -102,3 +102,29 @@ a {
 .w200 {
 	width: 200px !important;
 }
+
+input.error {
+	border: 1px solid red !important;
+	background-color: rgba(255,0,0,.1);
+}
+
+label.error {
+	color: red;
+	font-size: 12px;
+	margin-top: -10px;
+	display: block;
+	font-weight: 300;
+	margin-bottom: 7px;
+	text-align: right;
+}
+
+#subscribe {
+	position: relative;
+	input.error {
+		border: none !important;
+	}
+	label#email-error {
+		position: absolute;
+		bottom: -26px;
+	}
+}
