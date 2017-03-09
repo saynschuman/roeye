@@ -96,12 +96,19 @@ a {
 }
 
 .visible {
-	visibility: visible !important;
+	opacity: 1 !important;
+	transition: .3s;
+	visibility: visible;
+	z-index: 99;
 }
 
-.w200 {
-	width: 200px !important;
+.invis {
+	visibility: hidden !important;
 }
+
+// .w200 {
+// 	width: 100% !important;
+// }
 
 input.error {
 	border: 1px solid red !important;
@@ -127,4 +134,20 @@ label.error {
 		position: absolute;
 		bottom: -26px;
 	}
+}
+
+#s {
+	&.error {
+		border: none !important;
+		color: red !important;
+		placeholder {
+			color: red;
+		}
+	}
+}
+#s-error {
+	margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    position: absolute;
 }

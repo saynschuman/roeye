@@ -40,7 +40,7 @@
                 <div class="left-align">
                     <a href="" class="logo"><img src="img/logo.png" alt=""></a>
                 </div>
-                <div class="right-align">
+                <div class="right-align ad-menu">
                  <button type="button" class="mobile-menu"><span></span> Меню</button>
                     <nav class="top-nav">
                         <ul>
@@ -50,23 +50,51 @@
                             <li><a href="">Broadband list</a></li>
                             <li><a href="">Contact us</a></li>
                             <li class="toggled"><a href="" class="active">Residential</a>
-                                <ul class="submenu">
-                                    <li><a href="">sub-menu-1</a></li>
-                                    <li><a href="">sub-menu-2</a></li>
-                                    <li><a href="">sub-menu-3</a></li>
-                                </ul>
+                              <div class="submenu">
+                                <div class="submenu-inner">
+                                  <div class="col">
+                                    <span class="menu-header">Menu Header</span>
+                                    <ul>
+                                      <li><a href="#">Submenu item one</a></li>
+                                      <li><a href="#">Submenu item two</a></li>
+                                      <li><a href="#">Submenu item three</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="col">
+                                    <span class="menu-header">Menu Header #2</span>
+                                    <ul>
+                                      <li><a href="#">Submenu item one</a></li>
+                                      <li><a href="#">Submenu item two</a></li>
+                                      <li><a href="#">Submenu item three</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="col">
+                                    <span class="menu-header">Menu Header #3</span>
+                                    <ul>
+                                      <li><a href="#">Submenu item one</a></li>
+                                      <li><a href="#">Submenu item two</a></li>
+                                      <li><a href="#">Submenu item three</a></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
                             </li>
-                            <li><a href="" class="search-ic"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                <form id="header-search" action="">
-                                    <input id="s" type="search" placeholder="Search...">
-                                    <i id="close-search" class="fa fa-times" aria-hidden="true"></i>
-                                </form>
-                            </li>
+                            <li><a href="" class="search-ic"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
+        <form id="header-search" action="">
+            <div class="search-container">
+                <div class="search-header">
+                    <input id="s" type="search" name="search" autocomplete="off" required placeholder="Search here...">
+                    <input type="submit" value="">
+                    <div id="close-search"></div>
+                </div>
+            </div>
+        </form>
+
     </header>
 
 <main class="home">

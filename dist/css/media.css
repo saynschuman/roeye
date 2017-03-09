@@ -1,4 +1,18 @@
+@media screen and (max-width: 1410px) {
+  main.land .main-screen {
+    background-size: cover;
+    background-position: center; } }
+
 @media screen and (max-width: 1200px) {
+  .ad-menu {
+    width: 100%;
+    float: none; }
+  header.header .middle-header nav ul li .submenu .col .menu-header {
+    padding-bottom: 5px; }
+  header.header .middle-header nav ul li .submenu .col {
+    display: block; }
+    header.header .middle-header nav ul li .submenu .col:last-child {
+      margin-right: 40px; }
   header.header .middle-header nav ul li:last-child {
     margin-bottom: 10px; }
   header.header .middle-header nav ul li .submenu {
@@ -28,8 +42,9 @@
     right: 0;
     background: rgba(255, 255, 255, 0.1);
     z-index: 10;
-    width: 200px;
-    margin-top: 47px; }
+    width: 100%;
+    margin-top: 0;
+    float: right; }
   .mobile-menu + .top-nav li {
     float: none;
     margin: 0;
@@ -43,7 +58,9 @@
     left: auto;
     right: 0; }
   .mobile-menu.active + .top-nav {
-    display: block !important; } }
+    display: block !important; }
+  header.header .middle-header {
+    padding: 22px 0; } }
 
 @media screen and (max-width: 991px) {
   main .main-screen .main-block .left {
@@ -60,7 +77,11 @@
     margin-bottom: 35px; }
   main.land .left-p p {
     text-align: center;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    -webkit-border-radius: 4px;
+            border-radius: 4px; }
   main.land .title {
     line-height: 1.2;
     margin-bottom: 15px;
@@ -84,6 +105,15 @@
     padding: 50px 10px; } }
 
 @media screen and (max-width: 500px) {
+  .left-p, .right-f {
+    padding: 0; }
+  main.land .left-p p {
+    text-align: center;
+    margin-bottom: 20px;
+    background: rgba(242, 242, 242, 0.9);
+    padding: 5px 0;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
   header.header .top-header {
     font-size: 11px; }
   main .content h1 {
