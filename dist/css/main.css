@@ -533,7 +533,8 @@ main .content {
     font-size: 40px;
     font-family: 'Ubuntu Condensed', sans-serif;
     text-align: center;
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    text-transform: uppercase; }
   main .content .blue-bord {
     height: 2px;
     width: 63px;
@@ -794,6 +795,10 @@ footer.footer .footer-bottom {
 
 main.land h1 {
   text-transform: uppercase; }
+
+main.land h2 {
+  color: #000 !important;
+  text-transform: none !important; }
 
 main.land .main-screen {
   padding: 35px 0 75px;
