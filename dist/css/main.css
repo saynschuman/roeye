@@ -86,7 +86,7 @@ a {
   opacity: 1 !important;
   -webkit-transition: .3s;
   transition: .3s;
-  visibility: visible;
+  visibility: visible !important;
   z-index: 99; }
 
 .invis {
@@ -124,6 +124,10 @@ label.error {
   margin-bottom: 0;
   text-align: left;
   position: absolute; }
+
+.w1 {
+  width: 100% !important;
+  visibility: visible; }
 
 header.header .container {
   position: relative; }
@@ -200,6 +204,8 @@ header.header .middle-header {
       margin-left: 35px;
       position: relative;
       padding-bottom: 35px; }
+      header.header .middle-header nav ul li:first-child {
+        display: none; }
       header.header .middle-header nav ul li.toggled {
         position: static;
         z-index: 2; }
@@ -364,6 +370,30 @@ header.header form {
   padding: 15px 20px;
   background: #f2f2f2;
   transition: .3s; }
+  header.header form#mobile-search {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin-top: 7px; }
+    header.header form#mobile-search input {
+      background: #fff;
+      padding-left: 30px;
+      height: 35px;
+      border: 1px solid #d6d6d6;
+      -webkit-border-radius: 5px;
+              border-radius: 5px; }
+    header.header form#mobile-search button {
+      position: absolute;
+      left: 3px;
+      top: 7px;
+      background: transparent;
+      border: none;
+      color: #ddd; }
+      header.header form#mobile-search button::after {
+        content: '\f002';
+        font-family: FontAwesome; }
   header.header form input {
     width: 100%;
     border: none;

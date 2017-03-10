@@ -87,6 +87,9 @@ header.header {
 					margin-left: 35px;
 					position: relative;
 					padding-bottom: 35px;
+					&:first-child {
+						display: none;
+					}
 					&.toggled {
 						position: static;
 						z-index: 2;
@@ -279,6 +282,33 @@ header.header {
 		padding: 15px 20px;
 		background: #f2f2f2;
 		transition: .3s;
+		&#mobile-search {
+			visibility: visible;
+			opacity: 1;
+			width: 100%;
+			position: relative;
+			padding: 0;
+			margin-top: 7px;
+			input {
+				background: #fff;
+				padding-left: 30px;
+				height: 35px;
+				border: 1px solid #d6d6d6;
+				border-radius: 5px;
+			}
+			button {
+				position: absolute;
+				left: 3px;
+				top: 7px;
+				background: transparent;
+				border: none;
+				color: #ddd;
+				&::after {
+					content: '\f002';
+					font-family: FontAwesome;
+				}
+			}
+		}
 		input {
 			width: 100%;
 			border: none;

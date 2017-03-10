@@ -31,9 +31,15 @@
 		if($(window).width() < 1200) {
 			var searchTop = $('.main-screen').offset().top - 10;
 			submenu.offset({
-				left: 0,
-				top: searchTop
-			}).css('z-index', '9999');
+				left: 0
+			}).css({
+				'z-index': '9999',
+				width: '100%',
+				'max-width': '320',
+				left: '0',
+				top: '15px',
+				'margin-bottom': '20px'
+			});
 
 		}
 	})
@@ -87,6 +93,7 @@
 
 	$('.mobile-menu').click(function() {
 		$(this).toggleClass('active');
+
 	});
 
 	// validation

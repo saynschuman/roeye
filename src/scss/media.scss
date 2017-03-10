@@ -4,30 +4,85 @@ main.land .main-screen {
   background-position: center;
 } 
 }
-@media screen and (max-width: 1200px) {   
+@media screen and (max-width: 1200px) { 
+header.header .middle-header nav ul li:first-child {
+  display: block;
+}
+header.header .middle-header nav ul li .submenu {
+  padding: 0;
+}  
+header.header .middle-header nav ul li .submenu {
+  background: transparent;
+}  
+header.header .middle-header nav ul li .submenu .col .menu-header {
+    color: #111;
+    font-weight: 700;
+    font-size: 16px;
+    border-bottom: 1px solid #d6d6d6;
+    display: block;
+}
+.row  {
+  padding-left: 0;
+  padding-right: 0;
+}
+header.header .middle-header nav ul li a.active {
+    color: #111;
+}
+header.header .middle-header nav ul li .submenu li a {
+    color: #111;
+}
+header.header form #close-search {
+  display: none;
+}
+header.header form input[type="submit"] {
+  background: none; 
+}
+header.header form {
+  position: relative;
+}  
+header.header form input {
+  font-size: 18px;
+}
+header.header .search-header::before {
+  display: none;
+}
+header.header #header-search {
+    background: #f2f2f2;
+    height: 60px;
+}
+header.header .search-header {
+    position: relative;
+    padding: 0;
+}
+header.header #header-search,
+header.header .search-container {
+  display: none;
+}  
   .ad-menu {
     width: 100%;
     float: none;
+  }
+  header.header .middle-header nav ul {
+    margin-top: 5px;
+    margin-bottom: 10px;
   }
   header.header .middle-header nav ul li .submenu .col .menu-header {
     padding-bottom: 5px;
   }
   header.header .middle-header nav ul li .submenu .col {
-    display: block;
+    display: inline-block;
     &:last-child {
       margin-right: 40px;
     }
   }
   header.header .middle-header nav ul li:last-child {
     margin-bottom: 10px;
+    display: none;
   }
   header.header .middle-header nav ul li .submenu {
     left: -22px;
   }  
-  header.header .middle-header nav ul li.toggled a::after {
-    right: auto;
-    left: -15px;
-  }
+ 
   main .main-screen .main-block .left {
     width: 60%;
   }
@@ -39,24 +94,49 @@ main.land .main-screen {
     margin-bottom: 15px;
     font-size: 33px;
   }
+  header.header .middle-header nav ul li .submenu {
+    visibility: visible;
+    position: relative;
+  }
   header.header .middle-header nav ul li {
     display: block;
-    margin-left: 35px;
+    margin-left: 0;
     position: relative;
-    text-align: right;
+    text-align: left;
     padding: 4px 0;
-  }
+}
   .mobile-menu {
-    display: block; }
+    display: block;
+    margin-bottom: 22px; }
   .mobile-menu + .top-nav {
+    margin-top: 22px;
     display: none;
     top: 100%;
     right: 0;
-    background: rgba(255, 255, 255, 0.1);
+    background: #f2f2f2;
     z-index: 10;
     width: 100%;
     margin-top: 0;
     float: right;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -15px;
+      height: 100%;
+      width: 15px;
+      background: #f2f2f2;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -15px;
+      height: 100%;
+      width: 15px;
+      background: #f2f2f2;
+    }
 }
   .mobile-menu + .top-nav li {
     float: none;
@@ -75,7 +155,7 @@ main.land .main-screen {
 
 
 header.header .middle-header {
-  padding: 22px 0;
+    padding: 22px 0 0;
 }
 
 }
