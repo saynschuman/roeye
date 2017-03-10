@@ -518,7 +518,9 @@ main .main-screen {
         margin-bottom: 15px;
         position: relative;
         -webkit-transition: .3s;
-        transition: .3s; }
+        transition: .3s;
+        font-weight: 500;
+        font-size: 18px; }
         main .main-screen .main-block .right form button::before {
           content: '';
           position: absolute;
