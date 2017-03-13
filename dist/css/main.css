@@ -457,15 +457,21 @@ header.header form {
           -ms-transform: rotate(45deg);
               transform: rotate(45deg); }
 
+main h2 {
+  color: #000 !important;
+  text-transform: none !important;
+  font-family: 'Ubuntu Regular' !important;
+  font-weight: 900; }
+
 main .main-screen {
   height: auto;
   background-size: 100%;
   padding-top: 100px;
   padding-bottom: 118px; }
   main .main-screen .main-block {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(242, 242, 242, 0.9);
     padding: 23px 33px;
-    border: 1px solid #ccd2d7; }
+    border: 1px solid #d9d9d9; }
     main .main-screen .main-block .left {
       float: left;
       width: 782px; }
@@ -519,7 +525,7 @@ main .main-screen {
         position: relative;
         -webkit-transition: .3s;
         transition: .3s;
-        font-weight: 500;
+        font-family: 'Ubuntu Medium', sans-serif;
         font-size: 18px; }
         main .main-screen .main-block .right form button::before {
           content: '';
@@ -830,7 +836,9 @@ main.land h1 {
 
 main.land h2 {
   color: #000 !important;
-  text-transform: none !important; }
+  text-transform: none !important;
+  font-family: 'Ubuntu Regular' !important;
+  font-weight: 900; }
 
 main.land .main-screen {
   padding: 35px 0 75px;
